@@ -1,4 +1,5 @@
 pipeline {
+
     agent {
         docker {
             image 'node:lts-buster-slim'
@@ -9,6 +10,7 @@ pipeline {
     environment {
         CI = 'true'
     }
+    
     stages {
         stage('Build') {
             steps {
